@@ -1,0 +1,76 @@
+
+# CRUD Usuários - ASP.NET Core MVC com Mock em Memória
+
+> Projeto acadêmico de CRUD completo para gerenciamento de usuários, utilizando ASP.NET Core MVC e MySQL
+---
+
+## 🚀 Tecnologias Usadas
+
+- ASP.NET Core MVC (.NET 6 ou superior)
+- C#
+- Razor Views com Bootstrap 4 para front-end simples e responsivo
+- Visual Studio ou VSCode para desenvolvimento
+
+---
+
+## 🎯 Funcionalidades
+
+- Listar usuários
+- Criar novo usuário
+- Editar usuário existente
+- Excluir usuário
+
+---
+
+## 📁 Estrutura do Projeto
+
+/Controllers
+UsuarioController.cs // Controller CRUD 
+/Models
+Usuario.cs // Modelo de usuário
+/Views/Usuario
+Index.cshtml // Lista de usuários
+Criar.cshtml // Formulário criar usuário
+Editar.cshtml // Formulário editar usuário
+README.md // Documentação do projeto
+
+yaml
+Copiar
+Editar
+
+---
+
+## ⚙️ Como Rodar o Projeto Localmente
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/KauanKelv/Crud-C#.git
+
+Crie o banco de dados:
+
+CREATE DATABASE crud_usuarios;
+USE crud_usuarios;
+CREATE TABLE usuario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    senha VARCHAR(100)
+);
+
+Configure a string de conexão no arquivo `UsuarioController.cs`.
+
+Abra a pasta no Visual Studio ou VSCode.
+
+Certifique-se de ter o SDK .NET 6+ instalado:
+
+Rode a aplicação:
+
+dotnet run
+
+Acesse no navegador:
+
+http://localhost:5006/Usuario
+```
+📞 Contato
+Criado por Kauãn
+GitHub: https://github.com/seu-usuario
