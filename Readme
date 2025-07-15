@@ -1,76 +1,127 @@
-
 # CRUD Usuários - ASP.NET Core
 
+![Badge em Desenvolvimento](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![.NET Version](https://img.shields.io/badge/.NET-6.0-purple)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 > Projeto acadêmico de CRUD completo para gerenciamento de usuários, utilizando ASP.NET Core MVC e MySQL
----
+
+## 📌 Visão Geral
+
+Sistema de gerenciamento de usuários com operações básicas de CRUD (Create, Read, Update, Delete) desenvolvido como projeto acadêmico para demonstrar habilidades em desenvolvimento back-end com ASP.NET Core.
 
 ## 🚀 Tecnologias Usadas
 
-- ASP.NET Core MVC (.NET 6 ou superior)
-- C#
-- Razor Views com Bootstrap 4 para front-end simples e responsivo
-- Visual Studio ou VSCode para desenvolvimento
+- **Back-end**:
+  - ASP.NET Core MVC (.NET 6+)
+  - Entity Framework Core (opcional)
+  - MySQL Database
 
----
+- **Front-end**:
+  - Razor Views
+  - Bootstrap 4
+  - jQuery (para validações)
 
-## 🎯 Funcionalidades
+- **Ferramentas**:
+  - Visual Studio / VS Code
+  - Git e GitHub
 
-- Listar usuários
-- Criar novo usuário
-- Editar usuário existente
-- Excluir usuário
+## 🎯 Funcionalidades Principais
 
----
+✅ **CRUD Completo**:
+- Listagem paginada de usuários
+- Criação de novos usuários com validação
+- Edição de registros existentes
+- Exclusão segura com confirmação
+
+✅ **Recursos Adicionais**:
+- Validação de formulários no client-side e server-side
+- Design responsivo com Bootstrap
+- Tratamento de erros personalizado
 
 ## 📁 Estrutura do Projeto
 
-/Controllers
-UsuarioController.cs // Controller CRUD 
-/Models
-Usuario.cs // Modelo de usuário
-/Views/Usuario
-Index.cshtml // Lista de usuários
-Criar.cshtml // Formulário criar usuário
-Editar.cshtml // Formulário editar usuário
-README.md // Documentação do projeto
+/CRUD-Usuarios
+│
+├── Controllers/
+│ └── UsuarioController.cs # Lógica principal do CRUD
+│
+├── Models/
+│ └── Usuario.cs # Modelo de dados
+│
+├── Views/Usuario/
+│ ├── Index.cshtml # Listagem de usuários
+│ ├── Criar.cshtml # Formulário de criação
+│ └── Editar.cshtml # Formulário de edição
+│
+├── wwwroot/ # Arquivos estáticos
+│
+├── appsettings.json # Configurações
+└── README.md # Documentação
 
-yaml
-Copiar
-Editar
+## ⚙️ Pré-requisitos
 
----
+Antes de começar, você precisará ter instalado:
 
-## ⚙️ Como Rodar o Projeto Localmente
+- [.NET 6 SDK](https://dotnet.microsoft.com/download)
+- [MySQL Server](https://dev.mysql.com/downloads/) ou Docker para container MySQL
+- IDE de sua preferência (VS Code, Visual Studio, Rider)
+
+## 🛠️ Configuração do Ambiente
 
 1. Clone o repositório:
 ```bash
 git clone https://github.com/KauanKelv/Crud-C#.git
+cd Crud-C#
 
-Crie o banco de dados:
+Configure o banco de dados:
 
 CREATE DATABASE crud_usuarios;
 USE crud_usuarios;
+
 CREATE TABLE usuario (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100),
-    email VARCHAR(100),
-    senha VARCHAR(100)
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-Configure a string de conexão no arquivo `UsuarioController.cs`.
+Atualize a connection string no appsettings.json:
 
-Abra a pasta no Visual Studio ou VSCode.
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost;Database=crud_usuarios;Uid=root;Pwd=sua_senha;"
+}
 
-Certifique-se de ter o SDK .NET 6+ instalado:
-
-Rode a aplicação:
+Execute a aplicação:
 
 dotnet run
 
 Acesse no navegador:
 
 http://localhost:5006/Usuario
-```
+
+📚 Documentação Adicional
+Entity Framework Core
+
+ASP.NET Core MVC
+
+Bootstrap 4 Documentation
+
+🤝 Como Contribuir
+Faça um fork do projeto
+
+Crie uma branch para sua feature (git checkout -b feature/AmazingFeature)
+
+Commit suas mudanças (git commit -m 'Add some AmazingFeature')
+
+Push para a branch (git push origin feature/AmazingFeature)
+
+Abra um Pull Request
+
 📞 Contato
-Criado por Kauãn
-GitHub: https://github.com/seu-usuario
+Kauan Kelvin
+
+GitHub: @KauanKelv
+
+Email: kauanhemaldo88@gmail.com
