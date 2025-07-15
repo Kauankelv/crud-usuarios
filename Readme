@@ -1,15 +1,15 @@
 # CRUD Usuários - ASP.NET Core
-´´´
+
 ![Badge em Desenvolvimento](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![.NET Version](https://img.shields.io/badge/.NET-6.0-purple)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-´´´
+
 > Projeto acadêmico de CRUD completo para gerenciamento de usuários, utilizando ASP.NET Core MVC e MySQL
 
 ## 📌 Visão Geral
 
 Sistema de gerenciamento de usuários com operações básicas de CRUD (Create, Read, Update, Delete) desenvolvido como projeto acadêmico para demonstrar habilidades em desenvolvimento back-end com ASP.NET Core.
-´´´
+
 ## 🚀 Tecnologias Usadas
 
 - **Back-end**:
@@ -25,7 +25,7 @@ Sistema de gerenciamento de usuários com operações básicas de CRUD (Create, 
 - **Ferramentas**:
   - Visual Studio / VS Code
   - Git e GitHub
-´´´
+
 ## 🎯 Funcionalidades Principais
 
 ✅ **CRUD Completo**:
@@ -40,7 +40,7 @@ Sistema de gerenciamento de usuários com operações básicas de CRUD (Create, 
 - Tratamento de erros personalizado
 
 ## 📁 Estrutura do Projeto
-´´´
+
 /CRUD-Usuarios
 │
 ├── Controllers/
@@ -58,15 +58,15 @@ Sistema de gerenciamento de usuários com operações básicas de CRUD (Create, 
 │
 ├── appsettings.json # Configurações
 └── README.md # Documentação
-´´´
+
 ## ⚙️ Pré-requisitos
 
 Antes de começar, você precisará ter instalado:
-´´´
+
 - [.NET 6 SDK](https://dotnet.microsoft.com/download)
 - [MySQL Server](https://dev.mysql.com/downloads/) ou Docker para container MySQL
 - IDE de sua preferência (VS Code, Visual Studio, Rider)
-´´´
+
 ## 🛠️ Configuração do Ambiente
 
 1. Clone o repositório:
@@ -75,7 +75,7 @@ git clone https://github.com/KauanKelv/Crud-C#.git
 cd Crud-C#
 
 Configure o banco de dados:
-´´´
+
 CREATE DATABASE crud_usuarios;
 USE crud_usuarios;
 
@@ -86,28 +86,29 @@ CREATE TABLE usuario (
     senha VARCHAR(255) NOT NULL,
     data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-´´´
+
 Atualize a connection string no appsettings.json:
-´´´
+
 "ConnectionStrings": {
   "DefaultConnection": "Server=localhost;Database=crud_usuarios;Uid=root;Pwd=sua_senha;"
 }
-´´´
+
 Execute a aplicação:
-´´´
+
 dotnet run
-´´´
+
 Acesse no navegador:
-´´´
+
 http://localhost:5006/Usuario
-´´´
+```
+
 📚 Documentação Adicional
 
-Entity Framework Core
+-[Entity Framework Core](https://learn.microsoft.com/pt-br/ef/core/)
 
-ASP.NET Core MVC
+-[ASP.NET Core MVC](https://learn.microsoft.com/pt-br/aspnet/core/mvc/overview?view=aspnetcore-6.0)
 
-Bootstrap 4 Documentation
+-[Bootstrap 4 Documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
 🤝 Como Contribuir
 Faça um fork do projeto
